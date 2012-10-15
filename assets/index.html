@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="app.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+
+            var yes_no_dialog = new YesNoDialog("This is a dialog",{
+
+                on_yes: function(){
+                    $("#result").html("You have selected Yes");
+                },
+
+                on_no: function(){
+                    $("#result").html("You have selected No");
+                }
+
+            });
+
+            $("#demo_button").click(function(){
+
+                yes_no_dialog.show();
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <input type="button" id="demo_button" value="Demo App" />
+
+    <div id="result"></div>
+
+</body>
+</html>
